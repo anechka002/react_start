@@ -46,11 +46,34 @@ function AccordionTitle(props: AccordionTitlePropsType) {
 function AccordionBody() {
   // console.log('AccordionBody rendering');
   return (
+      <List numbers={numbers}/>
+  )
+}
+
+type NumbersType = {
+  id: number
+  num: number
+}
+const numbers = [
+  {id: 1, num: 1},
+  {id: 2, num: 2},
+  {id: 3, num: 3}
+]
+
+type ListPropsType = {
+  numbers: NumbersType[]
+}
+function List(props: ListPropsType) {
+  return (
+    <>
       <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
+        {props.numbers.map((n)=>{
+          return (          
+              <li key={n.id}>{n.num}</li>                  
+          )
+        })}
       </ul>
+    </>
   )
 }
 
