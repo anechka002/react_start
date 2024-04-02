@@ -1,14 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Accordion from './components/Accordion/Accordion';
 import Rating from './components/Rating/Rating';
 import OnOff from './components/OnOff/OnOff';
+import UncontrolledAccordion from './components/UncontrolledAccordion/UncontrolledAccordion';
+import UncontrolledRating from './components/UncontrolledRating/UncontrolledRating';
+
+// export type ValueProps = 'true' | 'false'
 
 function App() {
-  // console.log('App rendering');
+  console.log('App rendering');
+
+  // let [value, setValue] = useState<ValueProps>('false')
+  // console.log('value:', value)
+
   return (
     <div>
-      <PageTitle title={'This is APP component'}/>
+      {/* <PageTitle title={'This is APP component'}/>
       <PageTitle title={'My friends'}/>
       Article 1
       <Rating value={3} />
@@ -20,9 +28,12 @@ function App() {
       <Rating value={2}/>
       <Rating value={3}/>
       <Rating value={4}/>
-      <Rating value={5}/>
-      <OnOff value={true}/>
-      <OnOff value={false}/>
+      <Rating value={5}/> */}
+      {/* <OnOff/>
+      <OnOff/> */}
+      <UncontrolledAccordion titleValue={'Menu'}/>
+      <UncontrolledAccordion titleValue={'Users'}/>
+      <UncontrolledRating/>
     </div>
   );
 }
