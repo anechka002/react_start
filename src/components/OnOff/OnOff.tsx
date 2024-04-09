@@ -1,10 +1,12 @@
 import React, { useState } from 'react'
 
-function OnOff() {
-  console.log('OnOff rendering');
+type OnOffType = {
+  value: boolean
+  onChange: () => void
+}
 
-  let [value, setValue] = useState(false)
-  console.log('value:', value)
+function OnOff({value, onChange}: OnOffType) {
+  
 
   const onStyle = {
     width: '30px',
@@ -35,8 +37,8 @@ function OnOff() {
   }
   return (
     <div>
-      <div onClick={()=>{setValue(true)}} style={onStyle}>on</div>
-      <div onClick={()=>{setValue(false)}} style={offStyle}>off</div>
+      <div onClick={onChange} style={onStyle}>on</div>
+      <div onClick={onChange} style={offStyle}>off</div>
       <div style={indicatorStyle}></div>
     </div>
   )
