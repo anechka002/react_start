@@ -33,9 +33,9 @@ function App() {
 
       <UncontrolledAccordion titleValue={'Users'}/>
 
-      {/* <OnOff value={value} onChange={() => setValue(!value)}/> */}
+      <OnOff value={value} onChange={setValue}/>
 
-      <UncontrolledOnOff onChange={setValue}/> {value.toString()}
+      {/* <UncontrolledOnOff onChange={setValue}/> {value.toString()} */}
       
     </div>
   );
