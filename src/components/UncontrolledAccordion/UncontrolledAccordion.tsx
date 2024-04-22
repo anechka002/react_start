@@ -9,7 +9,7 @@ function UncontrolledAccordion(props: AccordionPropsType) {
   console.log('Accordion rendering');
 
   let [collapsed, setCollapsed] = useState(true)
-  console.log("collapsed: ", collapsed)
+  // console.log("collapsed: ", collapsed)
 
   const onClickCollapsed = (value: boolean) => {
     setCollapsed(value)
