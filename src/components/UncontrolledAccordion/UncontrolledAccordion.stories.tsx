@@ -7,6 +7,6 @@ export default {
   component: UncontrolledAccordion,
 };
 
-export const CollapsedAccordion = () => {
+export const ModeChanging = () => {
   return <UncontrolledAccordion titleValue='UncontrolledAccordion'/>
 }
