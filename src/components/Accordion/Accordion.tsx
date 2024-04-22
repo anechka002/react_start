@@ -42,7 +42,7 @@ type AccordionTitlePropsType = {
 function AccordionTitle(props: AccordionTitlePropsType) {
   // console.log('AccordionTitle rendering');
   return (
-    <h1 onClick={props.onChange}>==={props.title}===</h1>
+    <h3 onClick={(e)=>props.onChange()}>==={props.title}===</h3>
   )
 }
 
