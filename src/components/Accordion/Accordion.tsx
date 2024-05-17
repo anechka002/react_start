@@ -14,7 +14,7 @@ type AccordionPropsType = {
 }
 
 function Accordion(props: AccordionPropsType) {
-  // console.log('Accordion rendering');
+  console.log('Accordion rendering');
   
   return (
     <div>
@@ -46,7 +46,7 @@ type AccordionTitlePropsType = {
   onChange: () => void
 }
 function AccordionTitle(props: AccordionTitlePropsType) {
-  // console.log('AccordionTitle rendering');
+  console.log('AccordionTitle rendering');
   return (
     <h3 onClick={(e)=>props.onChange()}>==={props.title}===</h3>
   )
@@ -58,7 +58,7 @@ type AccordionBodyType = {
 }
 
 function AccordionBody({items, onClick}: AccordionBodyType) {
-  // console.log('AccordionBody rendering');
+  console.log('AccordionBody rendering');
   return (
     // <ul>
     //   {items.map((el, index) => <li onClick={() => onClick(el.value)} key={index}>{el.title}</li>)}
@@ -84,6 +84,7 @@ type ListPropsType = {
   onClick: (value: any) => void
 }
 function List(props: ListPropsType) {
+  console.log('List')
   return (
     <>
       <ul>

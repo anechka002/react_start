@@ -45,9 +45,10 @@ type PageTitlePropsType = {
   title: string
 }
 
-function PageTitle(props: PageTitlePropsType) {
+const PageTitle = React.memo(PageTitleSecret)
+function PageTitleSecret(props: PageTitlePropsType) {
   // debugger
-  // console.log('Title rendering');
+  console.log('Title rendering');
   return <h1>{props.title}</h1>
 }
 
